@@ -343,23 +343,37 @@ img {
     margin-bottom: 1rem;
 }
 
-/*------------SOBRE---------------*/
+/*------------Staff---------------*/
 .about__container {
     padding: 0 2rem;
 }
 
+.form{
+    margin: auto;
+}
+
+.card-group{
+    padding-left: 310px;
+}
+
+.card-group > button{
+    margin-left: 100px;
+    margin-top: 30px;
 
 
-.chefs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+}
+
+.card-group > input{
+    border-radius: 5px;
+    outline: 0;
+    padding: 10px;
+    width: 190%;
+
 }
 
 
 
-/*---------- CARDAPIO------------*/
+/*---------- MENU------------*/
 .menu__container {
     padding: 1rem 4rem;
 }
@@ -481,12 +495,12 @@ img {
 }
 
 .company,
-.services,
-.info,
-.addres {
+.info
+ {
     display: flex;
     flex-direction: column;
     margin-bottom: var(--mb-5);
+    
 }
 
 .company .logo {
@@ -515,7 +529,7 @@ img {
     border: .1rem solid var(--first-color);
 }
 
-.services a:hover,
+ a:hover,
 .info a:hover {
     text-decoration: underline;
 }
@@ -526,17 +540,22 @@ img {
     text-align: center;
 }
 
+
 .footer__title {
     font-weight: var(--font-bold);
     font-size: var(--h3-font-size);
     line-height: 29px;
     color: var(--first-color);
+    padding-left: 200px;
+    
 }
 
 .footer__subtittle {
     font-size: var(--normal-font-size);
     line-height: 22px;
     color: var(--text-color);
+    padding-left: 200px;
+    
 }
 
 /*-------MEDIA QUERY------*/
