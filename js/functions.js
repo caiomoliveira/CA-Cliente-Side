@@ -1,43 +1,10 @@
-/*------------ SHOW MENU-------------*/
-const showMneu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
-    /*valida se se existe as variaveis*/
-    if (toggle && nav) {
-        /*aqui adiciono a class show-menu na div com a class nav__menu*/
-        toggle.addEventListener('click', () => {
-            /*adicina a class show-menu na div que tem o id nav-menu */
-            nav.classList.toggle('show-menu')
-        })
-    }
-}
-showMneu('nav-toggle', 'nav-menu')
 
-/*------------ REMOVER MENU MOBILE-------------*/
-const navLink = document.querySelectorAll('.nav__link')
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    /*Quando um link for clicado a class show-menu será removido*/
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== DEIXA O LINK CLICADO COM A CLASS ACTIVE-LINK ====================*/
-const linkColor = document.querySelectorAll('.nav__link')
 
-function colorLink(){
-    if(linkColor){
-        linkColor.forEach(L => L.classList.remove('active-link'))
-        this.classList.add('active-link')
-    }
-}
-
-linkColor.forEach(L=> L.addEventListener('click', colorLink))
-
-/*------------BOX SHADOW NO HEADER-------------*/
+/*------------BOX SHADOW  HEADER-------------*/
 function scrollHeader(){
     const scrollHeader = document.getElementById('header');
-    // Quando o scroll tiver um altura maior que 200 será adiconado a class scroll-header na tag Header
+    // When the scroll be 200 wil add a class scroll header in a tag header
     if(this.scrollY >= 200) scrollHeader.classList.add('scroll-header'); else scrollHeader.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
@@ -45,23 +12,44 @@ window.addEventListener('scroll', scrollHeader)
 /*------------SHOW SCROLL TOP------------- */
 function scrollTop(){
     const scrollTop = document.getElementById('scroll-top');
-    // Quando o scroll tiver um altura maior que 560 será adiconado a class scroll-top
+    // When the scroll be more than 560 will be add a class scroll-top
     if(this.scrollY >= 560) scrollTop.classList.add('scroll-top'); else scrollTop.classList.remove('scroll-top')
 }
 window.addEventListener('scroll', scrollTop)
 
 
+/*---------------------------------------------*/
+checkpassword = function(validade){
+    var str = document.getElementById().value;
+    if(str.lenght < 8)
+    {
+        document.getElementById("demo").innerHTML= "Password lenght most be 8 char";
+        document.getElementById("demo").style.color="Red";
+        return("too_short");
 
-
-function validate(){
-    var access = form.password.value;
-
-    if(access == ""){
-        alert('Fill it out this field');
-        form.access.focus();
-        return false
-
+    } else if (str.search(/[0-9]/) == -1) {
+        document.getElementById("demo").innerHTML= "At least 1 numeric value most be enter";
+        document.getElementById("demo").style.color="Red";
+        return("no_number");
     }
+    else if (str.search(/[a-z]/) == -1) {
+        document.getElementById("demo").innerHTML= "At least 1 letter  most be enter";
+        document.getElementById("demo").style.color="Red";
+        return("no_letter");
+    }
+    else if (str.search(/[A-Z]/) == -1) {
+        document.getElementById("demo").innerHTML= "At least 1 Upper case letter  most be enter";
+        document.getElementById("demo").style.color="Red";
+        return("no_Uletter");
+    }
+    else if (str.search(/[!\@\#\$\%\¨\&\*\-\+\.\;\,\:]/) == -1) {
+        document.getElementById("demo").innerHTML= "At least 1 special char  most be enter";
+        document.getElementById("demo").style.color="Red";
+        return("no_Schar");
+    }
+        document.getElementById("demo").innerHTML= "Successful";
+        document.getElementById("demo").style.color="Green";
+        return("ok");
     
-
 }
+
