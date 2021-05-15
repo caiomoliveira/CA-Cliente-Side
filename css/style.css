@@ -96,9 +96,7 @@ img {
     transition: all 0.4s ease-in-out;
 }
 
-.btn:hover {
-    letter-spacing: 6px;
-}
+
 
 .btn-outline {
     width: 100%;
@@ -353,11 +351,11 @@ img {
 }
 
 .card-group{
-    padding-left: 310px;
+    padding-left: 360px;
 }
 
-.card-group > button{
-    margin-left: 100px;
+.card-btn {
+    margin-left: 450px;
     margin-top: 30px;
 
 
@@ -367,7 +365,7 @@ img {
     border-radius: 5px;
     outline: 0;
     padding: 10px;
-    width: 190%;
+    width: 140%;
 
 }
 

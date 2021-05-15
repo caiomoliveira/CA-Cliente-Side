@@ -49,3 +49,19 @@ function scrollTop(){
     if(this.scrollY >= 560) scrollTop.classList.add('scroll-top'); else scrollTop.classList.remove('scroll-top')
 }
 window.addEventListener('scroll', scrollTop)
+
+
+
+
+function validate(){
+    var access = form.password.value;
+
+    if(access == ""){
+        alert('Fill it out this field');
+        form.access.focus();
+        return false
+
+    }
+    
+
+}
